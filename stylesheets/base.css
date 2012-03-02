@@ -1,0 +1,186 @@
+html{height: 100%}
+body {
+  color: #808080;
+  background: #f3f3f3;
+  font: 14px "Lucida Grande",tahoma, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+p{
+  font-size: 12px;
+  line-height: 17px;
+}
+a:link, a:visited {
+  color: #3b5998;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  color: #3b5998;
+  font-weight: bold;
+}
+h1{ font-size: 30px; margin-bottom: 5px;}
+h2{ font-size: 28px; margin-bottom: 20px;}
+h3{ font-size: 20px; margin-bottom: 20px;}
+h4{ font-size: 18px; margin-bottom: 1px;}
+#wrapper{
+  width: 800px;
+  margin: 20px auto;
+}
+#main{
+  background: #fff;
+  border: solid #e4e4e4 1px;
+  border-radius: 4px;
+}
+
+/* header section */
+#header{
+  height: 231px;
+  background: url("../images/header-clouds.jpg") no-repeat;
+  border-bottom: solid #e4e4e4 1px;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  overflow: hidden;
+}
+#header h1{
+  margin: 50px 0 20px 0;
+  text-shadow: 0px 1px 1px rgba(255,255,255,.6);
+}
+img#devices{
+  float: left;
+  margin: 15px 20px 0 23%;
+}
+#header h3{
+  color: #595959;
+  text-shadow: 0px 1px 1px rgba(255,255,255,.8);
+  text-align: left;
+  width: 350px;
+  float: left;
+  margin-top: 40px;
+}
+/* build section */
+#build{
+  float:left ;
+  width: 348px;
+  padding: 20px 20px 20px 30px;
+}
+#build ul li, #learn ul li{
+  overflow: auto;
+  margin-bottom: 15px;
+}
+#build ul li:last-child, #learn ul li:last-child{
+  margin-bottom: 0px;
+}
+#build img.icon, #learn img.icon{
+  float: left;
+  margin-right: 10px;
+}
+#build ul li h4, #learn ul li h4{
+  margin-top: 10px;
+}
+/* learn section */
+#learn{
+  float:left ;
+  width: 348px;
+  padding: 20px 30px 20px 20px;
+  border-left: solid #e4e4e4 1px;
+}
+
+/*examples section*/
+#examples{
+  padding: 20px 10px 20px 10px;
+  border-top: solid #e4e4e4 1px;
+}
+#examples h2{
+  text-align: center;
+  margin-bottom: 25px;
+}
+#examples #friends-list, #examples #photos-list, #examples #liked-list{
+  width: 200px;
+  padding: 0 20px;
+  float: left;
+}
+#examples #friends-list a, #examples #photos-list a, #examples #liked-list a{
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#examples #friends-list ul li{ 
+  clear: both;
+  margin-bottom: 5px;
+  overflow: auto;
+}
+#examples #friends-list ul li a{
+  position: relative;
+}
+#examples #friends-list ul li a img{
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+#examples #photos-list{
+  width: 240px;
+  border-right: solid #e4e4e4 1px;
+  border-left: solid #e4e4e4 1px;
+}
+#examples #photos-list ul li{ 
+  margin-bottom: 5px;
+  overflow: auto;
+  clear: both;
+}
+#examples #photos-list ul li a{
+  position: relative;
+}
+#examples #photos-list ul li a img{
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 80px;
+}
+
+
+#examples #liked-list{
+  border-right: none;
+}
+#examples #liked-list ul li{ 
+  clear: both;
+  margin-bottom: 5px;
+  overflow: auto;
+/*  height: 61px;*/
+}
+#examples #liked-list ul li a{
+  position: relative;
+}
+#examples #liked-list ul li a img{
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* samples section */
+#samples{
+  padding: 20px 30px 30px 30px;
+  border-top: solid #e4e4e4 1px;
+}
+#samples h3{ color: #333; font-size: 18px;}
+#samples h4{ font-size: 16px;}
+footer{}
+footer a#running-appfog{
+  display: block;
+  width: 200px;
+  margin: 20px 0 0 14px;
+}
+#samples li{
+  float: left;
+  width: 216px;
+  margin-right: 41px;
+}
+#samples li:last-child{ margin-right: 0px;}
+#samples img{ margin-left: -6px;}
+
+.clearfix{
+  clear: both;
+}
