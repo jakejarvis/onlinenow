@@ -59,10 +59,14 @@ class FBUtils {
    *
    * @return app access token if login is successful
    */
-  public static function login($redirect) {
+  public static function login($redirect = null) {
     $app_id = AppInfo::appID();
     $app_secret = AppInfo::appSecret();
-    $home = AppInfo::getHome();
+    if(is_null($redirect)){
+      $home = AppInfo::getHome();
+    }else{
+      $home = $redirect;      
+    }
     // Scope defines what permissions that we are asking the user to grant.
     // In this example, we are asking for the ability to publish stories
     // about using the app, access to what the user likes, and to be able
