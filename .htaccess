@@ -1,0 +1,4 @@
+<IfModule mod_env.c>
+    SetEnv FACEBOOK_APP_ID 12345
+    SetEnv FACEBOOK_SECRET abcde
+</IfModule>
