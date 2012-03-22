@@ -267,7 +267,7 @@ $he_user_id = he($user_id);
                         $name = he(idx($friend, 'name'));
                     ?>
                     <li>
-                        <a href="https://www.facebook.com/<?= he($id); ?>" target="_top">
+                        <a href="https://www.facebook.com/<?= $id; ?>" target="_top">
                             <img src="https://graph.facebook.com/<?= $id ?>/picture?type=square" alt="<?= $name; ?>">
                             <?= $name; ?>
                         </a>
