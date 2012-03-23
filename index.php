@@ -88,7 +88,7 @@ $he_user_id = he($user_id);
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
-        <title><?= $he_app_name; ?></title>
+        <title><?php echo $app_name; ?></title>
         <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
         <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
 
@@ -101,13 +101,13 @@ $he_user_id = he($user_id);
         <!-- over facebook.  You should fill these tags in with      -->
         <!-- your data.  To learn more about Open Graph, visit       -->
         <!-- 'https://developers.facebook.com/docs/opengraph/'       -->
-        <meta property="og:title" content="<?= $app_name; ?>" />
+        <meta property="og:title" content="<?php echo $app_name; ?>" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="<?= $app_url; ?>" />
-        <meta property="og:image" content="<?= AppInfo::getUrl('/logo.png'); ?>" />
-        <meta property="og:site_name" content="<?= $app_name; ?>" />
+        <meta property="og:url" content="<?php echo $app_url; ?>" />
+        <meta property="og:image" content="<?php echo AppInfo::getUrl('/logo.png'); ?>" />
+        <meta property="og:site_name" content="<?php echo $app_name; ?>" />
         <meta property="og:description" content="My first app" />
-        <meta property="fb:app_id" content="<?= $app_id; ?>" />
+        <meta property="fb:app_id" content="<?php echo $app_id; ?>" />
 
         <script type="text/javascript" src="/javascript/jquery-1.7.1.min.js"></script>
 
@@ -174,11 +174,11 @@ $he_user_id = he($user_id);
         <script type="text/javascript">
         window.fbAsyncInit = function() {
             FB.init({
-                appId     : '<?= $app_id; ?>', // App ID
-                channelUrl: '//<?= $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
+                appId     : '<?php echo $app_id; ?>', // App ID
+                channelUrl: '//<?php echo $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
                 status    : true, // check login status
                 cookie    : true, // enable cookies to allow the server to access the session
-                xfbml     : true // parse XFBML
+                xfbml     : true  // parse XFBML
             });
 
             // Listen to the auth.login which will be called when the user logs in
@@ -210,25 +210,25 @@ $he_user_id = he($user_id);
 
         <header class="clearfix">
             <?php if (isset($basic)) { ?>
-            <p id="picture" style="background-image: url(https://graph.facebook.com/<?= $he_user_id; ?>/picture?type=normal)"></p>
+            <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo $he_user_id; ?>/picture?type=normal)"></p>
 
             <div>
-                <h1>Welcome, <strong><?= he(idx($basic, 'name')); ?></strong></h1>
+                <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong></h1>
                 <p class="tagline">
                     This is your app
-                    <a href="<?= he(idx($app_info, 'link'));?>" target="_top"><?= $app_name; ?></a>
+                    <a href="<?php echo he(idx($app_info, 'link')); ?>" target="_top"><?php echo $app_name; ?></a>
                 </p>
 
                 <div id="share-app">
                     <p>Share your app:</p>
                     <ul>
                         <li>
-                            <a href="#" class="facebook-button" id="postToWall" data-url="<?= $app_url; ?>">
+                            <a href="#" class="facebook-button" id="postToWall" data-url="<?php echo $app_url; ?>">
                                 <span class="plus">Post to Wall</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<?= $app_url; ?>">
+                            <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<?php echo $app_url; ?>">
                                 <span class="speech-bubble">Send Message</span>
                             </a>
                         </li>
@@ -267,9 +267,9 @@ $he_user_id = he($user_id);
                         $name = he(idx($friend, 'name'));
                     ?>
                     <li>
-                        <a href="https://www.facebook.com/<?= $id; ?>" target="_top">
-                            <img src="https://graph.facebook.com/<?= $id ?>/picture?type=square" alt="<?= $name; ?>">
-                            <?= $name; ?>
+                        <a href="https://www.facebook.com/<?php echo $id; ?>" target="_top">
+                            <img src="https://graph.facebook.com/<?php echo $id; ?>/picture?type=square" alt="<?php echo $name; ?>">
+                            <?php echo $name; ?>
                         </a>
                     </li>
                     <?php
@@ -290,8 +290,8 @@ $he_user_id = he($user_id);
                         $link = he(idx($photo, 'link'));
                         $class = ($i++ % 4 === 0) ? 'first-column' : '';
                     ?>
-                    <li style="background-image: url(<?= $picture; ?>);" class="<?= $class; ?>">
-                        <a href="<?= $link; ?>" target="_top"></a>
+                    <li style="background-image: url(<?php echo $picture; ?>);" class="<?php echo $class; ?>">
+                        <a href="<?php echo $link; ?>" target="_top"></a>
                     </li>
                     <?php
                     }
@@ -312,9 +312,9 @@ $he_user_id = he($user_id);
                         # that object's page.
                     ?>
                     <li>
-                        <a href="https://www.facebook.com/<?= $id; ?>" target="_top">
-                            <img src="https://graph.facebook.com/<?= $id ?>/picture?type=square" alt="<?= $item; ?>">
-                            <?= $item; ?>
+                        <a href="https://www.facebook.com/<?php echo $id; ?>" target="_top">
+                            <img src="https://graph.facebook.com/<?php echo $id; ?>/picture?type=square" alt="<?php echo $item; ?>">
+                            <?php echo $item; ?>
                         </a>
                     </li>
                     <?php
@@ -333,9 +333,9 @@ $he_user_id = he($user_id);
                         $name = he(idx($auf, 'name'));
                     ?>
                     <li>
-                        <a href="https://www.facebook.com/<?= $id; ?>" target="_top">
-                            <img src="https://graph.facebook.com/<?= $id ?>/picture?type=square" alt="<?= $name; ?>">
-                            <?= $name; ?>
+                        <a href="https://www.facebook.com/<?php echo $id; ?>" target="_top">
+                            <img src="https://graph.facebook.com/<?php echo $id; ?>/picture?type=square" alt="<?php echo $name; ?>">
+                            <?php echo $name; ?>
                         </a>
                     </li>
                     <?php
