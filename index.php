@@ -19,6 +19,11 @@
 <?php include('online.php') ?>    </div>
   </div>
   <?php echo LIFESTREET_AD_CODE ?>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo STATIC_ASSETS_URL ?>/js/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>
+    
+  </script>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
     FB.init({
