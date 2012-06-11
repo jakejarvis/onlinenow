@@ -35,9 +35,13 @@ div#wrapper div#header h2{
   float: left;
   color: #333;
 }
-div#wrapper div#header div.fb-subscribe{
+div#wrapper div#header iframe{
   margin-top: 11px;
   float: right;
+  overflow: hidden;
+  height: 28px;
+  width: 400px;
+  border: none; 
 }
 div#wrapper div#count {
   margin-bottom: 6px;
