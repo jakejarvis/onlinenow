@@ -1,3 +1,3 @@
 AddDefaultCharset UTF-8
-Redirect /favicon.ico http://s3.amazonaws.com/onlinenow/favicon.ico
-Redirect /favicon.png http://s3.amazonaws.com/onlinenow/favicon.png
+Redirect /favicon.ico http://d3k1e4d21pxsnd.cloudfront.net/favicon.ico
+Redirect /favicon.png http://d3k1e4d21pxsnd.cloudfront.net/favicon.png
