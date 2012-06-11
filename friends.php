@@ -5,7 +5,7 @@ require_once('lib/facebook.php');
 
 // reject if not inside facebook.com canvas
 if(!isset($_POST['signed_request']))
-  die('<p style="text-align:center;padding:10px;">Please don\'t load this page directly. Visit https:'.FACEBOOK_CANVAS_URL.'/ to use Online Now.</p>');
+  die('<p class="error">Please don\'t load this page directly. Visit https:'.FACEBOOK_CANVAS_URL.'/ to use Online Now.</p>');
 
 // create our application instance
 $facebook = new Facebook(array(
@@ -16,7 +16,7 @@ $facebook = new Facebook(array(
 
 // check if logged in
 if(!$facebook->getUser())
-  die("You need to be logged in to do that.");
+  die('<p class="error">You need to be logged in to do that.</p>');
 
 // run fql query
 $result = $facebook->api(array(

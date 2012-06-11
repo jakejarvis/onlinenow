@@ -20,6 +20,14 @@ div#wrapper {
   border: 1px solid #b7b7b7;
   width: 758px;
 }
+div#wrapper p.error {
+	text-align: center;
+	font-weight: bold;
+	font-size: 13px;
+	color: #888;
+	margin: 20px;
+	padding: 8px;
+}
 div#wrapper div#header {
   background: #f7f7f7;
   padding: 0px 20px 15px 20px;
