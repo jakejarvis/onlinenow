@@ -75,7 +75,7 @@ div#wrapper div#friends a img.status {
 div#wrapper div#friends a span.name {
   float: left;
   padding-left: 6px;
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: bold;
 }
 div#wrapper div#error {
@@ -95,7 +95,7 @@ div#wrapper div.ad {
   border-top: 1px solid #d8dfea;
 }
 div.ad iframe {
-	width: 728px;
-	height: 90px;
-	border: 0px;
+  width: 728px;
+  height: 90px;
+  border: 0px;
 }
