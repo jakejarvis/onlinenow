@@ -20,7 +20,7 @@
 	}
 	
 	// reject if not inside facebook.com canvas
-	if(!$_POST['signed_request'])
+	if(!isset($_POST['signed_request']))
 		die("Please don't load this page directly. <a href=\"".$canvas_url."/\">Click here</a> to use Online Now.");
 	
 	// create our application instance
@@ -33,8 +33,6 @@
 	// check if logged in
 	if(!$facebook->getUser())
 		die("You need to be logged in to do that.");
-	
-	$fql_query = "SELECT uid, name, online_presence, pic_square, username FROM user WHERE (uid IN (SELECT uid2 FROM friend WHERE uid1 = me()) AND (online_presence=\"active\" OR online_presence=\"idle\")) ORDER BY first_name";
 	
 	// run fql query
 	$result = $facebook->api(array(
