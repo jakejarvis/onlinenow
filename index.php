@@ -16,13 +16,15 @@
       <iframe src="//www.facebook.com/plugins/subscribe.php?api_key=<?php echo FACEBOOK_APP_ID ?>&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>
     </div>
     <div id="friends">
-<?php include('online.php') ?>    </div>
+<?php include('friends.php') ?>    </div>
   </div>
   <?php echo LIFESTREET_AD_CODE ?>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo STATIC_ASSETS_URL ?>/js/jquery.min.js"%3E%3C/script%3E'))</script>
   <script>
-    
+    setInterval(function() {
+      $('#friends').load('friends.php').fadeIn('fast');
+    }, 10000);
   </script>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
