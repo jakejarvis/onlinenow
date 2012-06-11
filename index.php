@@ -8,8 +8,8 @@
   define('FACEBOOK_APP_ID', getenv('FACEBOOK_APP_ID'));
   define('FACEBOOK_SECRET', getenv('FACEBOOK_SECRET'));
   
-  define('FACEBOOK_CANVAS_URL',   "//" . getenv('FACEBOOK_CANVAS_URL');
-  define('FACEBOOK_CALLBACK_URL', "//" . getenv('FACEBOOK_CALLBACK_URL');
+  define('FACEBOOK_CANVAS_URL',   "//" . getenv('FACEBOOK_CANVAS_URL'));
+  define('FACEBOOK_CALLBACK_URL', "//" . getenv('FACEBOOK_CALLBACK_URL'));
   define('STATIC_ASSETS_URL',     "//" . getenv('STATIC_ASSETS_URL'));
   
   define('GAUGES_SITE_ID',           '4fd5510cf5a1f50c7b000052');
