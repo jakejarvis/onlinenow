@@ -27,7 +27,7 @@ div#wrapper div#header {
   margin-bottom: 6px;
   height: 33px;
 }
-div#wrapper div#header h2{
+div#wrapper div#header h2 {
   margin: 15px 0px 15px 0px;
   font-size: 14px;
   padding: 0px 0px 0px 25px;
@@ -35,7 +35,7 @@ div#wrapper div#header h2{
   float: left;
   color: #333;
 }
-div#wrapper div#header iframe{
+div#wrapper div#header iframe {
   margin-top: 11px;
   float: right;
   overflow: hidden;
