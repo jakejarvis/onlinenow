@@ -11,7 +11,7 @@
   
   // lifestreet ad code
   function ad() {
-    return '<div class="ad"><iframe width="728" height="90" frameborder="no" framespacing="0" scrolling="no" src="//ads.lfstmedia.com/slot/slot25079?ad_size=728x90&amp;adkey=21b"></iframe></div>'."\n";
+    return '<div class="ad"><iframe scrolling="no" src="//ads.lfstmedia.com/slot/slot25079?ad_size=728x90&amp;adkey=21b"></iframe></div>'."\n";
   }
   
   // reject if not inside facebook.com canvas
@@ -52,7 +52,7 @@
   <div id="wrapper">
     <div id="header">
       <a href="<?php echo $canvas_url ?>/" target="_top"><h2>Online Now</h2></a>
-      <iframe scrolling="no" src="https://www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;colorscheme=light&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;locale=en_US&amp;show_faces=false&amp;width=400"></iframe>
+      <iframe scrolling="no" src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;colorscheme=light&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;locale=en_US&amp;show_faces=false&amp;width=400"></iframe>
     </div>
 <?php
   // display the number of users
@@ -66,31 +66,34 @@
     echo 's';
   echo ' online.</div>'."\n";
 
+  echo '  <div class="friends">'."\n";
+
   for ($i = 0; $i < $total; $i++) {
     if($result[$i]['online_presence'] == "offline" || !$result[$i]['online_presence'])
       $result[$i]['online_presence'] = "idle";
 
     // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 2
     if( ( $total > 5 ) && ( $total < 20 && floor($total/2) == $i ) || ( $total >= 20 && floor($total/3) == $i ) || ( $total >= 20 && floor($total/1.5) == $i ) ) {
-      echo "    ".ad();
+      echo "      ".ad();
     }
 
-    echo "    ".'<a class="person" href="//www.facebook.com/';
+    echo "      ".'<a href="//www.facebook.com/';
 
     if($result[$i]['username']) echo $result[$i]['username'];
     else echo 'profile.php?id='.$result[$i]['uid'];
 
     echo '" target="_top">
-      <img src="'.$result[$i]['pic_square'].'" class="profile_pic" alt="'.$result[$i]['name'].'" title="'.$result[$i]['name'].'">
-      <img src="'.$static_url.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'" title="'.$result[$i]['online_presence'].'">
-      <span class="name">'.$result[$i]['name'].'</span>
-    </a>'."\n";
+        <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'" alt="'.$result[$i]['name'].'">
+        <img src="'.$static_url.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
+        <span class="name">'.$result[$i]['name'].'</span>
+      </a>'."\n";
   }
-?>  </div>
+?>    </div>
+  </div>
   <?php echo ad() ?>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
-    // autogrow the canvas
+    // autogrow the canvas every second
     FB.init({
       appId      : '<?php echo $app_id ?>',
       channelUrl : '<?php echo $callback_url ?>/channel.php',

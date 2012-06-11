@@ -47,7 +47,7 @@ div#wrapper div#count {
   margin-bottom: 6px;
   margin-left: 16px;
 }
-div#wrapper a.person {
+div#wrapper a {
   clear: both;
   display: block;
   border-top: 1px solid #d8dfea;
@@ -56,10 +56,10 @@ div#wrapper a.person {
   height: 40px;
   width: 758px;
 }
-div#wrapper a.person:hover {
+div#wrapper a:hover {
   background-color: #f7f7f7;
 }
-div#wrapper a.person img.profile_pic {
+div#wrapper a img.pic {
   float: left;
   padding-top: 5px;
   padding-left: 8px;
@@ -67,12 +67,12 @@ div#wrapper a.person img.profile_pic {
   height: 30px;
   border: 0px;
 }
-div#wrapper a.person img.status {
+div#wrapper a img.status {
   float: left;
   padding-top: 16px;
   padding-left: 7px;
 }
-div#wrapper a.person span.name {
+div#wrapper a span.name {
   float: left;
   padding-left: 6px;
   font-size: 11.5px;
@@ -93,4 +93,9 @@ div.ad {
 }
 div#wrapper div.ad {
   border-top: 1px solid #d8dfea;
+}
+div.ad iframe {
+	width: 728px;
+	height: 90px;
+	border: 0px;
 }
