@@ -5,7 +5,7 @@ require_once('lib/facebook.php');
 
 // reject if not inside facebook.com canvas
 if(!isset($_POST['signed_request']))
-  die("Please don't load this page directly. <a href=\"".FACEBOOK_CANVAS_URL."/\">Click here</a> to use Online Now.");
+  die("Please don't load this page directly. Visit ".FACEBOOK_CANVAS_URL." to use Online Now.");
 
 // create our application instance
 $facebook = new Facebook(array(
