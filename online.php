@@ -28,7 +28,7 @@ $result = $facebook->api(array(
 $total = count($result);
 
 // display the number of users
-echo "    ".'<div id="count">You have ';
+echo "      ".'<div id="count">You have ';
 if ($total > 0)
   echo $total;
 else
@@ -47,16 +47,16 @@ for ($i = 0; $i < $total; $i++) {
     echo "      ".LIFESTREET_AD_CODE;
   }
 
-  echo "    ".'<a href="//www.facebook.com/';
+  echo "      ".'<a href="//www.facebook.com/';
 
   if($result[$i]['username']) echo $result[$i]['username'];
   else echo 'profile.php?id='.$result[$i]['uid'];
 
   echo '" target="_top">
-      <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'">
-      <img src="'.STATIC_ASSETS_URL.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
-      <span class="name">'.$result[$i]['name'].'</span>
-    </a>'."\n";
+        <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'">
+        <img src="'.STATIC_ASSETS_URL.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
+        <span class="name">'.$result[$i]['name'].'</span>
+      </a>'."\n";
 }
 
 ?>
