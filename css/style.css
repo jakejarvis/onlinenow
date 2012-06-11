@@ -78,13 +78,6 @@ div#wrapper div#friends a span.name {
   font-size: 12px;
   font-weight: bold;
 }
-div#wrapper div#error {
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-  color: #888;
-  margin: 6px;
-}
 div.ad {
   margin: 0px;
   padding: 10px 0px;
