@@ -30,8 +30,9 @@ div#wrapper div#header {
 div#wrapper div#header h2 {
   margin: 15px 0px 15px 0px;
   font-size: 14px;
+  line-height: 16px;
   padding: 0px 0px 0px 25px;
-  background: url('../img/icon.png') no-repeat 1px 1px;
+  background: url('../img/icon.png') no-repeat;
   float: left;
   color: #333;
 }
