@@ -62,6 +62,7 @@
       <a href="<?php echo FACEBOOK_CANVAS_URL ?>/" target="_top"><h2>Online Now</h2></a>
       <iframe src="//www.facebook.com/plugins/subscribe.php?api_key=<?php echo FACEBOOK_APP_ID ?>&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>
     </div>
+    <div id="friends">
 <?php
   // display the number of users
   echo "    ".'<div id="count">You have ';
@@ -73,8 +74,6 @@
   if($total == 0 || $total > 1)
     echo 's';
   echo ' online.</div>'."\n";
-
-  echo '    <div id="friends">'."\n";
 
   for ($i = 0; $i < $total; $i++) {
     if($result[$i]['online_presence'] == "offline" || !$result[$i]['online_presence'])
