@@ -21,12 +21,12 @@ div#wrapper {
   width: 758px;
 }
 div#wrapper p.error {
-	text-align: center;
-	font-weight: bold;
-	font-size: 13px;
-	color: #888;
-	margin: 20px;
-	padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  color: #888;
+  margin: 20px;
+  padding: 8px;
 }
 div#wrapper div#header {
   background: #f7f7f7;
