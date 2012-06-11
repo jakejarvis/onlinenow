@@ -83,7 +83,7 @@
     else echo 'profile.php?id='.$result[$i]['uid'];
 
     echo '" target="_top">
-        <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'" alt="'.$result[$i]['name'].'">
+        <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'">
         <img src="'.$static_url.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
         <span class="name">'.$result[$i]['name'].'</span>
       </a>'."\n";
