@@ -15,7 +15,7 @@
   define('GAUGES_SITE_ID',           '4fd5510cf5a1f50c7b000052');
   define('GOOGLE_ANALYTICS_ACCOUNT', 'UA-1563964-18');
   
-  define('LIFESTREET_AD_CODE', '<div class="ad"><iframe scrolling="no" src="//ads.lfstmedia.com/slot/slot25079?ad_size=728x90&amp;adkey=21b"></iframe></div>' . "\n");
+  define('LIFESTREET_AD_CODE', '<div class="ad"><iframe src="//ads.lfstmedia.com/slot/slot25079?ad_size=728x90&amp;adkey=21b" scrolling="no"></iframe></div>' . "\n");
   
   
   
@@ -60,7 +60,7 @@
   <div id="wrapper">
     <div id="header">
       <a href="<?php echo FACEBOOK_CANVAS_URL ?>/" target="_top"><h2>Online Now</h2></a>
-      <iframe scrolling="no" src="//www.facebook.com/plugins/subscribe.php?api_key=<?php echo FACEBOOK_APP_ID ?>&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false"></iframe>
+      <iframe src="//www.facebook.com/plugins/subscribe.php?api_key=<?php echo FACEBOOK_APP_ID ?>&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>
     </div>
 <?php
   // display the number of users
