@@ -28,7 +28,7 @@ $result = $facebook->api(array(
 $total = count($result);
 
 // display the number of users
-echo "      ".'<div id="count">You have ';
+echo "    ".'<div id="count">You have ';
 if ($total > 0)
   echo $total;
 else
