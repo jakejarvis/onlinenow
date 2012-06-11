@@ -1,27 +1,35 @@
 <?php
-  require 'lib/facebook.php';
+  
+  /***********************
+  *    CONFIGURATION
+  ************************/
   
   // get FB credentials from PHPFog so the source is safe to share!
-  $app_id = getenv('FACEBOOK_APP_ID');
-  $app_secret = getenv('FACEBOOK_SECRET');
+  define('FACEBOOK_APP_ID', getenv('FACEBOOK_APP_ID'));
+  define('FACEBOOK_SECRET', getenv('FACEBOOK_SECRET'));
   
-  $canvas_url = "//".getenv('FACEBOOK_CANVAS_URL');
-  $static_url = "//".getenv('STATIC_ASSETS_URL');
-  $callback_url = "//".getenv('FACEBOOK_CALLBACK_URL');
+  define('FACEBOOK_CANVAS_URL',   "//" . getenv('FACEBOOK_CANVAS_URL');
+  define('FACEBOOK_CALLBACK_URL', "//" . getenv('FACEBOOK_CALLBACK_URL');
+  define('STATIC_ASSETS_URL',     "//" . getenv('STATIC_ASSETS_URL'));
   
-  // lifestreet ad code
-  function ad() {
-    return '<div class="ad"><iframe scrolling="no" src="//ads.lfstmedia.com/slot/slot25079?ad_size=728x90&amp;adkey=21b"></iframe></div>'."\n";
-  }
+  define('GAUGES_SITE_ID',           '4fd5510cf5a1f50c7b000052');
+  define('GOOGLE_ANALYTICS_ACCOUNT', 'UA-1563964-18');
+  
+  define('LIFESTREET_AD_CODE', '<div class="ad"><iframe scrolling="no" src="//ads.lfstmedia.com/slot/slot25079?ad_size=728x90&amp;adkey=21b"></iframe></div>' . "\n");
+  
+  
+  
+  
+  require 'lib/facebook.php';
   
   // reject if not inside facebook.com canvas
   if(!isset($_POST['signed_request']))
-    die("Please don't load this page directly. <a href=\"".$canvas_url."/\">Click here</a> to use Online Now.");
+    die("Please don't load this page directly. <a href=\"".FACEBOOK_CANVAS_URL."/\">Click here</a> to use Online Now.");
   
   // create our application instance
   $facebook = new Facebook(array(
-    'appId'  => $app_id,
-    'secret' => $app_secret,
+    'appId'  => FACEBOOK_APP_ID,
+    'secret' => FACEBOOK_SECRET,
     'cookie' => false,
   ));
   
@@ -43,15 +51,15 @@
 <head>
   <meta charset="utf-8">
   <title>Online Now</title>
-  <link rel="stylesheet" href="<?php echo $static_url ?>/css/style.css">
-  <link rel="icon" href="<?php echo $static_url ?>/img/favicon.ico">
+  <link rel="stylesheet" href="<?php echo STATIC_ASSETS_URL ?>/css/style.css">
+  <link rel="icon" href="<?php echo STATIC_ASSETS_URL ?>/img/favicon.ico">
 </head>
 <body>
   <div id="fb-root"></div>
-  <?php echo ad() ?>
+  <?php echo LIFESTREET_AD_CODE ?>
   <div id="wrapper">
     <div id="header">
-      <a href="<?php echo $canvas_url ?>/" target="_top"><h2>Online Now</h2></a>
+      <a href="<?php echo FACEBOOK_CANVAS_URL ?>/" target="_top"><h2>Online Now</h2></a>
       <iframe scrolling="no" src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;colorscheme=light&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;locale=en_US&amp;show_faces=false&amp;width=400"></iframe>
     </div>
 <?php
@@ -74,7 +82,7 @@
 
     // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 2
     if( ( $total > 5 ) && ( $total < 20 && floor($total/2) == $i ) || ( $total >= 20 && floor($total/3) == $i ) || ( $total >= 20 && floor($total/1.5) == $i ) ) {
-      echo "      ".ad();
+      echo "      ".LIFESTREET_AD_CODE;
     }
 
     echo "      ".'<a href="//www.facebook.com/';
@@ -84,19 +92,19 @@
 
     echo '" target="_top">
         <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'">
-        <img src="'.$static_url.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
+        <img src="'.STATIC_ASSETS_URL.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
         <span class="name">'.$result[$i]['name'].'</span>
       </a>'."\n";
   }
 ?>    </div>
   </div>
-  <?php echo ad() ?>
+  <?php echo LIFESTREET_AD_CODE ?>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
     // autogrow the canvas every second
     FB.init({
-      appId      : '<?php echo $app_id ?>',
-      channelUrl : '<?php echo $callback_url ?>/channel.php',
+      appId      : '<?php echo FACEBOOK_APP_ID ?>',
+      channelUrl : '<?php echo FACEBOOK_CALLBACK_URL ?>/channel.php',
       status     : false,
       cookie     : false,
       xfbml      : false,
@@ -109,13 +117,13 @@
       t.type  = 'text/javascript';
       t.async = true;
       t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '4fd5510cf5a1f50c7b000052');
+      t.setAttribute('data-site-id', '<?php echo GAUGES_SITE_ID ?>');
       t.src = '//secure.gaug.es/track.js';
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(t, s);
     })();
     // google analytics
-    var _gaq = [['_setAccount', 'UA-1563964-18'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
+    var _gaq = [['_setAccount', '<?php echo GOOGLE_ANALYTICS_ACCOUNT ?>'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
