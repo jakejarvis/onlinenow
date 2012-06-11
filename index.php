@@ -57,15 +57,12 @@
   });
   FB.Canvas.setAutoGrow(1000);
 </script>
-
 <?php echo ad() ?>
-
 <div id="wrapper">
   <div id="header">
     <a href="<?php echo $canvas_url ?>/" target="_top"><h2>Online Now</h2></a>
     <div class="fb-subscribe" data-href="https://www.facebook.com/jakejarvis" data-show-faces="false" data-width="400"></div>
   </div>
-
 <?php
   // display the number of users
   echo "  ".'<div id="count">You have ';
@@ -84,7 +81,7 @@
 
     // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 2
     if( ( $total > 5 ) && ( $total < 20 && floor($total/2) == $i ) || ( $total >= 20 && floor($total/3) == $i ) || ( $total >= 20 && floor($total/1.5) == $i ) ) {
-      echo "  ".ad()."\n";
+      echo "  ".ad();
     }
 
     echo "  ".'<a class="person" href="//www.facebook.com/';
@@ -96,12 +93,10 @@
     <img src="'.$result[$i]['pic_square'].'" class="profile_pic" alt="'.$result[$i]['name'].'" title="'.$result[$i]['name'].'">
     <img src="'.$static_url.'/images/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'" title="'.$result[$i]['online_presence'].'">
     <span class="name">'.$result[$i]['name'].'</span>
-  </a>'."\n\n";
+  </a>'."\n";
   }
 ?></div>
-
 <?php echo ad() ?>
-
 <script>
   var _gaq = [['_setAccount', 'UA-1563964-18'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
   (function() {
