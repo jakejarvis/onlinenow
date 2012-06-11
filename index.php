@@ -101,7 +101,6 @@
   <?php echo LIFESTREET_AD_CODE ?>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
-    // autogrow the canvas every second
     FB.init({
       appId      : '<?php echo FACEBOOK_APP_ID ?>',
       channelUrl : '<?php echo FACEBOOK_CALLBACK_URL ?>/channel.php',
@@ -110,7 +109,8 @@
       xfbml      : false,
     });
     FB.Canvas.setAutoGrow(1000);
-    // gaug.es tracking code <3
+  </script>
+  <script>
     var _gauges = _gauges || [];
     (function() {
       var t   = document.createElement('script');
@@ -122,7 +122,8 @@
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(t, s);
     })();
-    // google analytics
+  </script>
+  <script>
     var _gaq = [['_setAccount', '<?php echo GOOGLE_ANALYTICS_ACCOUNT ?>'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
