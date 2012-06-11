@@ -23,9 +23,7 @@
   <script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo STATIC_ASSETS_URL ?>/js/jquery.min.js"%3E%3C/script%3E'))</script>
   <script>
     setInterval(function() {
-      $('#friends').fadeOut('fast').load('friends.php', {'signed_request':'<?php echo $_POST['signed_request'] ?>'}, function() {
-        $(this).fadeIn('fast');
-      });
+      $('#friends').load('friends.php', {'signed_request':'<?php echo $_POST['signed_request'] ?>'});
     }, 30000);
   </script>
   <script src="//connect.facebook.net/en_US/all.js"></script>
@@ -37,7 +35,7 @@
       cookie     : false,
       xfbml      : false,
     });
-    FB.Canvas.setAutoGrow(1000);
+    FB.Canvas.setAutoGrow(1200);
   </script>
   <script>
     var _gauges = _gauges || [];
