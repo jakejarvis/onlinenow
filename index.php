@@ -25,7 +25,7 @@
     setInterval(function() {
       $('#friends').load('friends.php', {'signed_request':'<?php echo $_POST['signed_request'] ?>'}, function() {
         $(this).css({opacity: 0});
-        $(this).animate({opacity: 100}, 600);
+        $(this).animate({opacity: 100}, 1000);
       });
     }, 30000);
   </script>
