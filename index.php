@@ -60,7 +60,7 @@
   <div id="wrapper">
     <div id="header">
       <a href="<?php echo FACEBOOK_CANVAS_URL ?>/" target="_top"><h2>Online Now</h2></a>
-      <iframe scrolling="no" src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;colorscheme=light&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;locale=en_US&amp;show_faces=false&amp;width=400"></iframe>
+      <iframe scrolling="no" src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false"></iframe>
     </div>
 <?php
   // display the number of users
