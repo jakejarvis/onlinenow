@@ -1,5 +1,5 @@
 <?php
-  require 'facebook.php';
+  require 'lib/facebook.php';
   
   // get FB credentials from PHPFog so the source is safe to share!
   $app_id = getenv('FACEBOOK_APP_ID');
@@ -44,7 +44,7 @@
   <meta charset="utf-8">
   <title>Online Now</title>
   <link rel="stylesheet" href="<?php echo $static_url ?>/style.css">
-  <link rel="icon" href="<?php echo $static_url ?>/images/favicon.ico">
+  <link rel="icon" href="<?php echo $static_url ?>/img/favicon.ico">
 </head>
 <body>
   <div id="fb-root"></div>
@@ -91,7 +91,7 @@
 
     echo '" target="_top">
       <img src="'.$result[$i]['pic_square'].'" class="profile_pic" alt="'.$result[$i]['name'].'" title="'.$result[$i]['name'].'">
-      <img src="'.$static_url.'/images/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'" title="'.$result[$i]['online_presence'].'">
+      <img src="'.$static_url.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'" title="'.$result[$i]['online_presence'].'">
       <span class="name">'.$result[$i]['name'].'</span>
     </a>'."\n";
   }
