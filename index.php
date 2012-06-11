@@ -47,7 +47,6 @@
   <link rel="icon" href="<?php echo $static_url ?>/images/favicon.ico">
 </head>
 <body>
-
 <div id="fb-root"></div>
 <script src="//connect.facebook.net/en_US/all.js"></script>
 <script>
@@ -62,7 +61,6 @@
 <?php echo ad() ?>
 
 <div id="wrapper">
-  
   <div id="header">
     <a href="<?php echo $canvas_url ?>/" target="_top"><h2>Online Now</h2></a>
     <div class="fb-subscribe" data-href="https://www.facebook.com/jakejarvis" data-show-faces="false" data-width="400"></div>
@@ -70,7 +68,7 @@
 
 <?php
   // display the number of users
-  echo "\t".'<div id="count">You have ';
+  echo "  ".'<div id="count">You have ';
   if ($total > 0)
     echo $total;
   else
@@ -86,10 +84,10 @@
 
     // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 2
     if( ( $total > 5 ) && ( $total < 20 && floor($total/2) == $i ) || ( $total >= 20 && floor($total/3) == $i ) || ( $total >= 20 && floor($total/1.5) == $i ) ) {
-      echo "\t".ad()."\n";
+      echo "  ".ad()."\n";
     }
 
-    echo "\t".'<a class="person" href="//www.facebook.com/';
+    echo "  ".'<a class="person" href="//www.facebook.com/';
 
     if($result[$i]['username']) echo $result[$i]['username'];
     else echo 'profile.php?id='.$result[$i]['uid'];
@@ -100,8 +98,7 @@
     <span class="name">'.$result[$i]['name'].'</span>
   </a>'."\n\n";
   }
-?>
-</div>
+?></div>
 
 <?php echo ad() ?>
 
@@ -125,6 +122,5 @@
     s.parentNode.insertBefore(t, s);
   })();
 </script>
-  
 </body>
 </html>
