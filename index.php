@@ -43,7 +43,7 @@
 <head>
   <meta charset="utf-8">
   <title>Online Now</title>
-  <link rel="stylesheet" href="<?php echo $static_url ?>/style.css">
+  <link rel="stylesheet" href="<?php echo $static_url ?>/css/style.css">
   <link rel="icon" href="<?php echo $static_url ?>/img/favicon.ico">
 </head>
 <body>
