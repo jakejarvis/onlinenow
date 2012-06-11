@@ -49,7 +49,7 @@
 	<title>Online Now</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $static_url ?>/style.css" />
-	<link rel="icon" type="image/x-icon" href="<?php echo $static_url ?>/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="<?php echo $static_url ?>/images/favicon.ico" />
 </head>
 <body>
 
