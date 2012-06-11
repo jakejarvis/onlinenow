@@ -32,6 +32,9 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo STATIC_ASSETS_URL ?>/js/jquery.min.js"%3E%3C/script%3E'))</script>
   <script>
+    $(document).ready(function() {
+      FB.Canvas.setSize();
+    });
     setInterval(function() {
       $('#friends').load('friends.php', {'signed_request':'<?php echo $_POST['signed_request'] ?>'}, function() {
         $(this).css({opacity: 0});
@@ -39,10 +42,6 @@
         FB.Canvas.setSize();
       });
     }, 30000);
-    
-    $(document).ready(function() {
-      FB.Canvas.setSize();
-    });
   </script>
   <script>
     var _gauges = _gauges || [];
