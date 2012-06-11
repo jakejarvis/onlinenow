@@ -66,7 +66,7 @@
     echo 's';
   echo ' online.</div>'."\n";
 
-  echo '  <div class="friends">'."\n";
+  echo '    <div id="friends">'."\n";
 
   for ($i = 0; $i < $total; $i++) {
     if($result[$i]['online_presence'] == "offline" || !$result[$i]['online_presence'])
