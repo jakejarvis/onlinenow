@@ -50,20 +50,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $static_url ?>/style.css" />
 	<link rel="icon" type="image/x-icon" href="<?php echo $static_url ?>/favicon.ico" />
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-1563964-18']);
-		_gaq.push(['_setDomainName', 'none']);
-		_gaq.push(['_setAllowLinker', true]);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
 </head>
 <body>
 
@@ -124,6 +110,34 @@
 </div>
 
 <?php echo ad($protocol) ?>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1563964-18']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+	var _gauges = _gauges || [];
+	(function() {
+		var t   = document.createElement('script');
+		t.type  = 'text/javascript';
+		t.async = true;
+		t.id    = 'gauges-tracker';
+		t.setAttribute('data-site-id', '4fd5510cf5a1f50c7b000052');
+		t.src = '//secure.gaug.es/track.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(t, s);
+	})();
+</script>
 	
 </body>
 </html>
