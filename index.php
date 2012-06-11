@@ -47,25 +47,25 @@
   <link rel="icon" href="<?php echo $static_url ?>/images/favicon.ico">
 </head>
 <body>
-<div id="fb-root"></div>
-<script src="//connect.facebook.net/en_US/all.js"></script>
-<script>
-  FB.init({
-    appId      : '<?php echo $app_id ?>',
-    channelUrl : '<?php echo $callback_url ?>/channel.php',
-    xfbml      : true,
-  });
-  FB.Canvas.setAutoGrow(1000);
-</script>
-<?php echo ad() ?>
-<div id="wrapper">
-  <div id="header">
-    <a href="<?php echo $canvas_url ?>/" target="_top"><h2>Online Now</h2></a>
-    <div class="fb-subscribe" data-href="https://www.facebook.com/jakejarvis" data-show-faces="false" data-width="400"></div>
-  </div>
+  <div id="fb-root"></div>
+  <script src="//connect.facebook.net/en_US/all.js"></script>
+  <script>
+    FB.init({
+      appId      : '<?php echo $app_id ?>',
+      channelUrl : '<?php echo $callback_url ?>/channel.php',
+      xfbml      : true,
+    });
+    FB.Canvas.setAutoGrow(1000);
+  </script>
+  <?php echo ad() ?>
+  <div id="wrapper">
+    <div id="header">
+      <a href="<?php echo $canvas_url ?>/" target="_top"><h2>Online Now</h2></a>
+      <div class="fb-subscribe" data-href="https://www.facebook.com/jakejarvis" data-show-faces="false" data-width="400"></div>
+    </div>
 <?php
   // display the number of users
-  echo "  ".'<div id="count">You have ';
+  echo "    ".'<div id="count">You have ';
   if ($total > 0)
     echo $total;
   else
@@ -73,7 +73,7 @@
   echo ' friend';
   if($total == 0 || $total > 1)
     echo 's';
-  echo ' online.</div>'."\n\n";
+  echo ' online.</div>'."\n";
 
   for ($i = 0; $i < $total; $i++) {
     if($result[$i]['online_presence'] == "offline" || !$result[$i]['online_presence'])
@@ -81,41 +81,40 @@
 
     // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 2
     if( ( $total > 5 ) && ( $total < 20 && floor($total/2) == $i ) || ( $total >= 20 && floor($total/3) == $i ) || ( $total >= 20 && floor($total/1.5) == $i ) ) {
-      echo "  ".ad();
+      echo "    ".ad();
     }
 
-    echo "  ".'<a class="person" href="//www.facebook.com/';
+    echo "    ".'<a class="person" href="//www.facebook.com/';
 
     if($result[$i]['username']) echo $result[$i]['username'];
     else echo 'profile.php?id='.$result[$i]['uid'];
 
     echo '" target="_top">
-    <img src="'.$result[$i]['pic_square'].'" class="profile_pic" alt="'.$result[$i]['name'].'" title="'.$result[$i]['name'].'">
-    <img src="'.$static_url.'/images/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'" title="'.$result[$i]['online_presence'].'">
-    <span class="name">'.$result[$i]['name'].'</span>
-  </a>'."\n";
+      <img src="'.$result[$i]['pic_square'].'" class="profile_pic" alt="'.$result[$i]['name'].'" title="'.$result[$i]['name'].'">
+      <img src="'.$static_url.'/images/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'" title="'.$result[$i]['online_presence'].'">
+      <span class="name">'.$result[$i]['name'].'</span>
+    </a>'."\n";
   }
-?></div>
-<?php echo ad() ?>
-<script>
-  var _gaq = [['_setAccount', 'UA-1563964-18'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '4fd5510cf5a1f50c7b000052');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
+?>  </div>
+  <?php echo ad() ?>
+  <script>
+    var _gaq = [['_setAccount', 'UA-1563964-18'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4fd5510cf5a1f50c7b000052');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
 </body>
 </html>
