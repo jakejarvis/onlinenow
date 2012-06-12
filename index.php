@@ -10,6 +10,8 @@
 <body>
   <div id="fb-root"></div>
   <?php echo LIFESTREET_AD_CODE ?>
+  <p class="info">
+    <strong>Did you know that Online Now refreshes automatically now?</strong> Wait 30 seconds and see for yourself!
   <div id="wrapper">
     <div id="header">
       <a href="<?php echo FACEBOOK_CANVAS_URL ?>/" target="_top"><h2>Online Now</h2></a>
