@@ -11,7 +11,7 @@ if(!isset($_POST['signed_request']))
 $facebook = new Facebook(array(
   'appId'  => FACEBOOK_APP_ID,
   'secret' => FACEBOOK_SECRET,
-  'cookie' => false,
+  'sharedSession' => true
 ));
 
 // check if logged in
