@@ -6,6 +6,7 @@
   <title>Online Now</title>
   <link rel="stylesheet" href="<?php echo STATIC_ASSETS_URL ?>/css/style.css">
   <link rel="icon" href="<?php echo STATIC_ASSETS_URL ?>/img/favicon.ico">
+  <script src="//ads.lfstmedia.com/getad?site=81006" type="text/javascript"></script>
 </head>
 <body>
   <div id="fb-root"></div>
@@ -20,7 +21,6 @@
 <?php include('friends.php') ?>    </div>
   </div>
   <?php echo LIFESTREET_AD_CODE ?>
-  <script src="//ads.lfstmedia.com/getad?site=81006" type="text/javascript"></script>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
     FB.init({
