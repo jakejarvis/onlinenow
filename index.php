@@ -20,6 +20,7 @@
 <?php include('friends.php') ?>    </div>
   </div>
   <?php echo LIFESTREET_AD_CODE ?>
+  <script src="//ads.lfstmedia.com/getad?site=81006" type="text/javascript"></script>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
     FB.init({
