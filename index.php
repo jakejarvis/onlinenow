@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="<?php echo STATIC_ASSETS_URL ?>/css/style.css">
   <link rel="icon" href="<?php echo STATIC_ASSETS_URL ?>/img/favicon.ico">
   <script src="//ads.lfstmedia.com/getad?site=81006" type="text/javascript"></script>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 </head>
 <body>
   <div id="fb-root"></div>
@@ -56,6 +57,22 @@
       t.src = '//secure.gaug.es/track.js';
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+  <script type="text/javascript">
+    var _sf_async_config = { uid: 38128, domain: 'onlinenow.rs.af.cm', useCanonical: true };
+    (function() {
+      function loadChartbeat() {
+        window._sf_endpt = (new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+      };
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
     })();
   </script>
   <script>
