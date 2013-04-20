@@ -6,8 +6,8 @@
   <title>Online Now</title>
   <link rel="stylesheet" href="<?php echo STATIC_ASSETS_URL ?>/css/style.css">
   <link rel="icon" href="<?php echo STATIC_ASSETS_URL ?>/img/favicon.ico">
-  <script src="//ads.lfstmedia.com/getad?site=81006" type="text/javascript"></script>
-  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <script src="//ads.lfstmedia.com/getad?site=81006"></script>
+  <script>var _sf_startpt=(new Date()).getTime()</script>
 </head>
 <body>
   <div id="fb-root"></div>
@@ -16,12 +16,16 @@
   <div id="wrapper">
     <div id="header">
       <a href="<?php echo FACEBOOK_CANVAS_URL ?>/" target="_top"><h2>Online Now</h2></a>
-      <iframe src="//www.facebook.com/plugins/subscribe.php?api_key=<?php echo FACEBOOK_APP_ID ?>&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>
+      <!--<iframe src="//www.facebook.com/plugins/subscribe.php?api_key=<?php echo FACEBOOK_APP_ID ?>&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>-->
+      <a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
     <div id="friends">
 <?php include('friends.php') ?>    </div>
   </div>
   <?php echo LIFESTREET_AD_CODE ?>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo STATIC_ASSETS_URL ?>/js/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="//connect.facebook.net/en_US/all.js"></script>
   <script>
     FB.init({
@@ -32,8 +36,6 @@
       xfbml      : false,
     });
   </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo STATIC_ASSETS_URL ?>/js/jquery.min.js"%3E%3C/script%3E'))</script>
   <script>
     $(document).ready(function() {
       FB.Canvas.setSize();

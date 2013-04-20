@@ -15,14 +15,14 @@ define('STATIC_ASSETS_URL',     "//" . getenv('STATIC_ASSETS_URL'));
 define('GOOGLE_ANALYTICS_ACCOUNT', 'UA-1563964-18');
 define('GAUGES_SITE_ID',           '4fd5510cf5a1f50c7b000052');
 
-define('LIFESTREET_AD_CODE', '<script type="text/javascript">
+define('LIFESTREET_AD_CODE', '<script>
     //<![CDATA[
-        LSM_Slot({
-            adkey: \'21b\',
-            ad_size: \'728x90\',
-            slot: \'slot25079\'
-        });
+      LSM_Slot({
+        adkey: \'21b\',
+        ad_size: \'728x90\',
+        slot: \'slot25079\'
+      });
     //]]>
-</script>' . "\n");
+  </script>' . "\n");
 
 ?>
