@@ -18,6 +18,5 @@
 
 	<h4>5. SITE USE</h4>
 	<p>Without limiting the foregoing, everything on the Website is provided to you "AS IS" WITHOUT WARRANTY OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, and OR INFRINGEMENT. Neither Online Now nor any other party involved in creating, producing, or delivering the website shall be liable for any incidental, consequential, indirect, or punitive damages arising out of your access to, or use, of the website. Online Now does not warrant that the functional aspects of the website will be uninterrupted or error free, or that this website or server that makes it available are free of viruses or other harmful components. Your use and browsing of the website is at your own risk.</p>
-   </div>
 </body>
 </html>
