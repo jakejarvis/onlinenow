@@ -22,7 +22,7 @@ div#wrapper {
 }
 p.info, p.error {
   padding: 10px;
-  margin: 10px 0px;
+  margin: 0px 0px 10px 0px;
 }
 p.info {
   background-color: #fff9d7;
@@ -91,17 +91,14 @@ div#wrapper div#friends a span.name {
   font-size: 12px;
   font-weight: bold;
 }
-div.ad {
-  margin: 0px;
-  padding: 10px 0px;
-  text-align: center;
-  clear: both;
+ins {
+  padding: 10px 16px !important;
 }
-div#wrapper div.ad {
-  border-top: 1px solid #d8dfea;
+div#wrapper ins {
+  padding: 10px 15px 8px 15px !important;
+  border-top: 1px solid #d8dfea !important;
 }
-div.ad iframe {
-  width: 728px;
-  height: 90px;
-  border: 0px;
+ins ins, div#wrapper ins ins {
+  padding: 0px !important;
+  border: none !important;
 }

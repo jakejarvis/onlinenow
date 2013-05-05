@@ -42,8 +42,8 @@ for ($i = 0; $i < $total; $i++) {
   if($result[$i]['online_presence'] == "offline" || !$result[$i]['online_presence'])
     $result[$i]['online_presence'] = "idle";
 
-  // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 2
-  if( ( $total > 5 ) && ( $total < 20 && floor($total/2) == $i ) || ( $total >= 20 && floor($total/3) == $i ) || ( $total >= 20 && floor($total/1.5) == $i ) ) {
+  // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 3
+  if( ( $total > 5 ) && ( $total < 40 && floor($total/2) == $i ) || ( $total >= 40 && ( $i % floor($total/5) == 0 ) && $i != 0 && $i <= ( $total - floor($total/5) ) ) ) {
     echo "      ".LIFESTREET_AD_CODE;
   }
 
