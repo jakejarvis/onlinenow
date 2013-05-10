@@ -1,10 +1,11 @@
+{"friend": [
 <?php
 
 require_once('config.php');
 require_once('lib/facebook.php');
 
 // reject if not inside facebook.com canvas
-if(!isset($_POST['signed_request']))
+if(!isset($_GET['signed_request']))
   die('<p class="error">Please don\'t load this page directly. Visit https:'.FACEBOOK_CANVAS_URL.'/ to use Online Now.</p>');
 
 // create our application instance
@@ -14,59 +15,23 @@ $facebook = new Facebook(array(
   'sharedSession' => true
 ));
 
-// check if logged in
-if(!$facebook->getUser()) {
-  $loginUrl = $facebook->getLoginUrl(array(
-    'scope' => 'friends_online_presence',
-    'redirect_uri' => 'http:'.FACEBOOK_CANVAS_URL,
-  ));
-
-  echo '<script>top.location.href=\'' . $loginUrl . '\'</script>';
-}
-
-// check if logged in
-if(!$facebook->getUser())
-  die('<p class="error">You need to be logged in to do that.</p>');
-
 // run fql query
 $result = $facebook->api(array(
   'method' => 'fql.query',
   'query' => "SELECT uid, name, pic_square, online_presence, username FROM user WHERE (uid IN (SELECT uid2 FROM friend WHERE uid1 = me()) AND (online_presence=\"active\" OR online_presence=\"idle\")) ORDER BY first_name"
 ));
 
-// count friends (moved up to calculate height)
-$total = count($result);
+for ($i = 0; $i < count($result); $i++) {
+  if($result[$i]['username']) $url = $result[$i]['username'];
+  else $url = 'profile.php?id='.$result[$i]['uid'];
 
-// display the number of users
-echo "      ".'<div id="count">You have ';
-if ($total > 0)
-  echo $total;
-else
-  echo "no";
-echo ' friend';
-if($total == 0 || $total > 1)
-  echo 's';
-echo ' online.</div>'."\n";
+  echo '  {"name": "'.$result[$i]['name'].'", "url": "//www.facebook.com/'.$url.'", "pic": "'.$result[$i]['pic_square'].'", "presence": "'.$result[$i]['online_presence'].'"}';
 
-for ($i = 0; $i < $total; $i++) {
-  if($result[$i]['online_presence'] == "offline" || !$result[$i]['online_presence'])
-    $result[$i]['online_presence'] = "idle";
+  if($i != (count($result) - 1))
+    echo ",";
 
-  // crazy ad display algorithm... only display middle ads if more than 5 friends are online. if less than 20 only display one, if greater than 20 display 3
-  if( ( $total > 5 ) && ( $total < 40 && floor($total/2) == $i ) || ( $total >= 40 && ( $i % floor($total/5) == 0 ) && $i != 0 && $i <= ( $total - floor($total/5) ) ) ) {
-    echo "      ".LIFESTREET_AD_CODE;
-  }
-
-  echo "      ".'<a href="//www.facebook.com/';
-
-  if($result[$i]['username']) echo $result[$i]['username'];
-  else echo 'profile.php?id='.$result[$i]['uid'];
-
-  echo '" target="_top">
-        <img src="'.$result[$i]['pic_square'].'" class="pic" alt="'.$result[$i]['name'].'">
-        <img src="'.STATIC_ASSETS_URL.'/img/'.$result[$i]['online_presence'].'.png" class="status" alt="'.$result[$i]['online_presence'].'">
-        <span class="name">'.$result[$i]['name'].'</span>
-      </a>'."\n";
+  echo "\n";
 }
 
 ?>
+]}
