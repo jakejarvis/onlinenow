@@ -23,8 +23,9 @@
           echo '<iframe src="//www.facebook.com/plugins/subscribe.php?api_key='.FACEBOOK_APP_ID.'&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>';
         } else if($random == 1) {
           echo '<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
         }
+        echo "\n";
       ?>
     </div>
     <div id="friends">

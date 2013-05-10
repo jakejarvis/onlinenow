@@ -15,6 +15,16 @@ $facebook = new Facebook(array(
 ));
 
 // check if logged in
+if(!$facebook->getUser()) {
+  $loginUrl = $facebook->getLoginUrl(array(
+    'scope' => 'friends_online_presence',
+    'redirect_uri' => 'http:'.FACEBOOK_CANVAS_URL,
+  ));
+
+  echo '<script>top.location.href=\'' . $loginUrl . '\'</script>';
+}
+
+// check if logged in
 if(!$facebook->getUser())
   die('<p class="error">You need to be logged in to do that.</p>');
 
