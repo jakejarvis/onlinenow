@@ -22,16 +22,16 @@
       <h2>Online Now</h2>
       <script>
         var random = Math.round(Math.random());
-        if(random == 0)
-          document.write('<iframe src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>');
-        else if(random == 1) {
+        if(random == 0) {
           document.write('<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>');
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        }
+        } else if(random == 1)
+          document.write('<iframe src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>');
       </script>
     </div>
     <div id="friends">
-      <div style="text-align:center;color:#ccc;font-size:20px;margin:30px 0px;">Loading....</div>
+      <div style="text-align:center;color:#777;font-size:28px;margin:120px 0px 30px 0px;">Loading...</div>
+      <div style="text-align:center;color:#777;font-size:12px;margin:30px 0px 120px 0px;">If nothing appears, please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="https://onlinenow.zendesk.com/anonymous_requests/new" target="_blank">ask for help</a>.</div>
     </div>
   </div>
   <script>
@@ -40,6 +40,25 @@
       ad_size: '728x90',
       slot: 'slot25079'
     });
+  </script>
+  <script src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+  <style>
+    @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    #zenbox_tab {
+      top: 255px !important;
+    }
+  </style>
+  <script>
+    if (typeof(Zenbox) !== "undefined") {
+      Zenbox.init({
+        dropboxID:   "20170921",
+        url:         "https://onlinenow.zendesk.com",
+        tabTooltip:  "Help",
+        tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_help_right.png",
+        tabColor:    "#3B5998",
+        tabPosition: "Right"
+      });
+    }
   </script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write(unescape('%3Cscript src="/js/jquery.min.js"%3E%3C/script%3E'))</script>

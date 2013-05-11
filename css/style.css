@@ -60,7 +60,7 @@ div#wrapper div#count {
   margin-bottom: 6px;
   margin-left: 16px;
 }
-div#wrapper div#friends a {
+div#wrapper div#friends a.friend {
   clear: both;
   display: block;
   border-top: 1px solid #d8dfea;
@@ -69,10 +69,10 @@ div#wrapper div#friends a {
   height: 40px;
   width: 758px;
 }
-div#wrapper div#friends a:hover {
+div#wrapper div#friends a.friend:hover {
   background-color: #f7f7f7;
 }
-div#wrapper div#friends a img.pic {
+div#wrapper div#friends a.friend img.pic {
   float: left;
   padding-top: 5px;
   padding-left: 8px;
@@ -80,12 +80,12 @@ div#wrapper div#friends a img.pic {
   height: 30px;
   border: 0px;
 }
-div#wrapper div#friends a img.status {
+div#wrapper div#friends a.friend img.status {
   float: left;
   padding-top: 16px;
   padding-left: 7px;
 }
-div#wrapper div#friends a span.name {
+div#wrapper div#friends a.friend span.name {
   float: left;
   padding-left: 6px;
   font-size: 12px;
