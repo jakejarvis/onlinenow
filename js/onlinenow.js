@@ -1,7 +1,7 @@
-var FACEBOOK_APP_ID = '143568755827293';
-var FACEBOOK_CALLBACK_URL = '//onlinenowdev.aws.af.cm';
-var FACEBOOK_CANVAS_URL = '//apps.facebook.com//onlinenowdev';
-var FACEBOOK_CANVAS_URL_RAW = 'http%3A%2F%2Fapps.facebook.com%2Fonlinenowdev';
+var FACEBOOK_APP_ID = '200473816679120';
+var FACEBOOK_CALLBACK_URL = '//onlinenow.aws.af.cm';
+var FACEBOOK_CANVAS_URL = '//apps.facebook.com/newonlinenow';
+var FACEBOOK_CANVAS_URL_RAW = 'http%3A%2F%2Fapps.facebook.com%2Fnewonlinenow';
 
 // if not in iframe, redirect to apps.FB.com url
 if(self == top)
