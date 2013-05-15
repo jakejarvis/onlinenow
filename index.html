@@ -21,12 +21,17 @@
     <div id="header">
       <h2>Online Now</h2>
       <script>
-        var random = Math.round(Math.random());
+        var random = Math.floor(Math.random() * 3);
         if(random == 0) {
           document.write('<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>');
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        } else if(random == 1)
+        } else if(random == 1) {
           document.write('<iframe src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>');
+        } else if(random == 2) {
+          document.write(unescape('%3Cscript src="https://apis.google.com/js/plusone.js"%3E%3C/script%3E'));
+          document.write('<div style="height:54px; float:right; margin-top:-5px; overflow:hidden;"><div class="g-plus" data-width="300" data-height="69" data-href="//plus.google.com/113761892032285192236" data-rel="author"></div></div>');
+    //      document.write('<style>div#___plus_0{}</style>')
+        }
       </script>
     </div>
     <div id="friends">
