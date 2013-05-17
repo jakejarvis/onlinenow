@@ -29,7 +29,6 @@ window.fbAsyncInit = function() {
           var ad_src = "";
 
           for(var i = 0; i < $('iframe').get().length; i++) {
-            console.log($('iframe').get(i).src);
             if($('iframe').get(i).src.indexOf("lfstmedia") !== -1) {
               ad_src = $('iframe').get(i).src;
             }
