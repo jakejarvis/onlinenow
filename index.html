@@ -3,34 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>Online Now</title>
+  <script>
+    var _errs=["519662ad2e149f084100007e"];(function(a,b){a.onerror=function(){_errs.push(arguments)};
+    var d=function(){var a=b.createElement("script"),c=b.getElementsByTagName("script")[0];
+    a.src="//d15qhc0lu1ghnk.cloudfront.net/beacon.js";a.async=!0;
+    c.parentNode.insertBefore(a,c)};a.addEventListener?a.addEventListener("load",d,!1):
+    a.attachEvent("onload",d)})(window,document);
+  </script>
   <script>var _sf_startpt=(new Date()).getTime()</script>
   <script src="//ads.lfstmedia.com/getad?site=81006"></script>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-66f05bb0069bd2a20028f0f860dda417.css">
   <link rel="icon" href="/img/favicon.ico">
 </head>
 <body>
   <div id="fb-root"></div>
   <script>
-    LSM_Slot({
-      adkey: '21b',
-      ad_size: '728x90',
-      slot: 'slot25079'
-    });
+    if (typeof LSM_Slot == 'function') {    // don't fire if AdBlock installed
+      LSM_Slot({
+        adkey: '21b',
+        ad_size: '728x90',
+        slot: 'slot25079'
+      });
+    }
   </script>
   <div id="wrapper">
     <div id="header">
       <h2>Online Now</h2>
       <script>
-        var random = Math.floor(Math.random() * 3);
-        if(random == 0) {
+        var random = Math.floor(Math.random() * 6);
+        if(random == 0 || random == 1 || random == 2) {    // Twitter
+          document.write(unescape('%3Cscript src="//platform.twitter.com/widgets.js"%3E%3C/script%3E'));
           document.write('<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>');
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        } else if(random == 1) {
+        } else if(random == 3) {    // Facebook
           document.write('<iframe src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>');
-        } else if(random == 2) {
+        } else if(random == 4 || random == 5) {    // Google+
           document.write(unescape('%3Cscript src="https://apis.google.com/js/plusone.js"%3E%3C/script%3E'));
           document.write('<div style="height:54px; float:right; margin-top:-5px; overflow:hidden;"><div class="g-plus" data-width="300" data-height="69" data-href="//plus.google.com/113761892032285192236" data-rel="author"></div></div>');
-    //      document.write('<style>div#___plus_0{}</style>')
         }
       </script>
     </div>
@@ -40,19 +48,18 @@
     </div>
   </div>
   <script>
-    LSM_Slot({
-      adkey: '21b',
-      ad_size: '728x90',
-      slot: 'slot25079'
-    });
-  </script>
-  <script src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
-  <style>
-    @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
-    #zenbox_tab {
-      top: 255px !important;
+    if (typeof LSM_Slot == 'function') {    // don't fire if AdBlock installed
+      LSM_Slot({
+        adkey: '21b',
+        ad_size: '728x90',
+        slot: 'slot25079'
+      });
     }
-  </style>
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write(unescape('%3Cscript src="/js/jquery.min.js"%3E%3C/script%3E'))</script> <!-- Google CDN Fallback -->
+  <script src="/js/onlinenow-66f05bb0069bd2a20028f0f860dda417.js"></script>
+  <script src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
   <script>
     if (typeof(Zenbox) !== "undefined") {
       Zenbox.init({
@@ -65,10 +72,6 @@
       });
     }
   </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write(unescape('%3Cscript src="/js/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="//connect.facebook.net/en_US/all.js"></script>
-  <script src="/js/onlinenow.js"></script>
   <script>
     /* gaug.es */
     var _gauges = _gauges || [];
