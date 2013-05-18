@@ -1,1 +1,4 @@
 assets/js/application.js
+.DS_Store
+.gitignore
+.git
