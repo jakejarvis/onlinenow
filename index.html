@@ -3,14 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Online Now</title>
-  <script>
-    var _errs=["519662ad2e149f084100007e"];(function(a,b){a.onerror=function(){_errs.push(arguments)};
-    var d=function(){var a=b.createElement("script"),c=b.getElementsByTagName("script")[0];
-    a.src="//d15qhc0lu1ghnk.cloudfront.net/beacon.js";a.async=!0;
-    c.parentNode.insertBefore(a,c)};a.addEventListener?a.addEventListener("load",d,!1):
-    a.attachEvent("onload",d)})(window,document);
-  </script>
-  <script>var _sf_startpt=(new Date()).getTime()</script>
+  <script>var _sf_startpt=(new Date()).getTime()</script> <!-- chartbeat -->
   <script src="//ads.lfstmedia.com/getad?site=81006"></script>
   <link rel="stylesheet" href="assets/css/screen.css">
   <link rel="icon" href="assets/img/favicon.ico">
@@ -30,25 +23,17 @@
     <div id="header">
       <h2>Online Now</h2>
       <script>
-        var random = Math.floor(Math.random() * 6);
-        if(random == 0 || random == 1 || random == 2) {    // Twitter
-          document.write(unescape('%3Cscript src="//platform.twitter.com/widgets.js"%3E%3C/script%3E'));
-          document.write('<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>');
-        } else if(random == 3) {    // Facebook
-          document.write('<iframe src="//www.facebook.com/plugins/subscribe.php?api_key=200473816679120&amp;href=https%3A%2F%2Fwww.facebook.com%2Fjakejarvis&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false" scrolling="no"></iframe>');
-        } else if(random == 4 || random == 5) {    // Google+
-          document.write(unescape('%3Cscript src="https://apis.google.com/js/plusone.js"%3E%3C/script%3E'));
-          document.write('<div style="height:54px; float:right; margin-top:-5px; overflow:hidden;"><div class="g-plus" data-width="300" data-height="69" data-href="//plus.google.com/113761892032285192236" data-rel="author"></div></div>');
-        }
+        document.write(unescape('%3Cscript src="//platform.twitter.com/widgets.js"%3E%3C/script%3E'));
+        document.write('<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>');
       </script>
     </div>
     <div id="friends">
       <div style="text-align:center;color:#777;font-size:28px;margin:120px 0px 30px 0px;">Loading...</div>
-      <div style="text-align:center;color:#777;font-size:12px;margin:30px 0px 120px 0px;">If nothing appears, please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="https://onlinenow.zendesk.com/anonymous_requests/new" target="_blank">ask for help</a>.</div>
+      <div style="text-align:center;color:#777;font-size:12px;margin:30px 0px 120px 0px;">If nothing appears in a few seconds, please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="https://onlinenow.zendesk.com/anonymous_requests/new" target="_blank">ask for help</a>.</div>
     </div>
   </div>
   <script>
-    if (typeof LSM_Slot == 'function') {    // don't fire if AdBlock installed
+    if (typeof LSM_Slot == 'function') {
       LSM_Slot({
         adkey: '21b',
         ad_size: '728x90',
@@ -91,6 +76,21 @@
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    /* chartbeat */
+    var _sf_async_config = { uid: 52960, domain: 'secure.jakejarvis.com', useCanonical: true };
+    (function() {
+      function loadChartbeat() {
+        window._sf_endpt = (new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+      };
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
     })();
   </script>
 </body>
